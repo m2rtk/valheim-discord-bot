@@ -31,7 +31,7 @@ public final class Main {
 
     private final static Logger log = LoggerFactory.getLogger(Main.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         log.info("Starting up");
 
         final var token = Objects.requireNonNull(System.getenv("BOT_TOKEN"), "BOT_TOKEN env variable must be set");
@@ -50,6 +50,7 @@ public final class Main {
                     .build();
         } catch (LoginException e) {
             log.error("Fatal: {}", e.getMessage(), e);
+            throw e;
         }
     }
 
