@@ -85,7 +85,7 @@
                     <to>
                         <image>docker.io/m2rtk/valheim-discord-bot</image>
                         <tags>
-                            <tag>${version}</tag>
+                            <tag>${project.version}</tag>
                         </tags>
                         <auth>
                             <username>${env.DOCKERHUB_USERNAME}</username>
