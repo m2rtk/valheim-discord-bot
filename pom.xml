@@ -83,7 +83,14 @@
                         <image>adoptopenjdk:16-jre</image>
                     </from>
                     <to>
-                        <image>localhost:5000/myimage</image>
+                        <image>docker.io/m2rtk/valheim-discord-bot</image>
+                        <tags>
+                            <tag>${version}</tag>
+                        </tags>
+                        <auth>
+                            <username>${env.DOCKERHUB_USERNAME}</username>
+                            <password>${env.DOCKERHUB_PASSWORD}</password>
+                        </auth>
                     </to>
                 </configuration>
             </plugin>
